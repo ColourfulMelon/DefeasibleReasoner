@@ -5,9 +5,13 @@ import java.awt.event.ActionListener;
 
 public class defeasibleReasoner implements ActionListener {
     private JFrame frame;
-    private JLabel title;
     private  JPanel panel;
     private JButton next;
+    private JButton add;
+    private JTextField input;
+    private JLabel title;
+    private JLabel enter_noun;
+
 
     public defeasibleReasoner() {
         frame = new JFrame();
@@ -40,6 +44,5 @@ public class defeasibleReasoner implements ActionListener {
 
 
         }
-    }
 }
 
