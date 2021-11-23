@@ -16,8 +16,8 @@ public class defeasibleReasoner implements ActionListener {
     private JLabel enter_noun = new JLabel("Enter a Noun");
     private JLabel nouns = new JLabel("Nouns:");
     private  JList list;
-  //  private DefaultListModel listModel;
-    private JScrollPane scroll = new JScrollPane();
+    //  private DefaultListModel listModel;
+    //private JScrollPane scroll = new JScrollPane();
     private List<String> objectList = new ArrayList<>(0);
 
     public defeasibleReasoner() {
@@ -31,7 +31,7 @@ public class defeasibleReasoner implements ActionListener {
 
         input.setSize(400,30);
 
-       // listModel = new DefaultListModel();
+        // listModel = new DefaultListModel();
         //list = new JList(listModel);
         list = new JList<String>(objectList.toArray(new String[objectList.size()]));
         list.setVisibleRowCount(-1);
@@ -39,8 +39,8 @@ public class defeasibleReasoner implements ActionListener {
         //list.setPreferredSize(new Dimension(300,500));
         //list.setPreferredSize(new Dimension(300,500));
         list.setBackground(Color.ORANGE);
-        scroll.setViewportView(list);
-        scroll.getViewport().setOpaque(false);
+        //scroll.setViewportView(list);
+        //scroll.getViewport().setOpaque(false);
         list.setLayoutOrientation(JList.VERTICAL);
 
 
@@ -59,7 +59,7 @@ public class defeasibleReasoner implements ActionListener {
         //right.setBorder(BorderFactory.createEmptyBorder(30,30,600,200));
         right.setLayout(null);
         right.add(nouns);
-        right.add(scroll);
+        right.add(list);
         right.setBackground(Color.GREEN);
         //panel.add(right, BorderLayout.EAST);
 
@@ -86,11 +86,10 @@ public class defeasibleReasoner implements ActionListener {
         }
         else if (e.getSource() == add){
             System.out.println("Add button pressed");
-           // listModel.addElement(input.getText());
+            // listModel.addElement(input.getText());
             objectList.add(input.getText());
 
         }
 
     }
 }
-
